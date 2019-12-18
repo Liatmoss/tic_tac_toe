@@ -11,6 +11,8 @@ class Game
   end
 
   def player_o(pos)
+    raise 'This space is already taken' if @board[pos] != ' '
+
     @board[pos, 1] = 'O'
     @board
   end
