@@ -1,4 +1,8 @@
+require_relative 'calculation'
+
 class Game
+  attr_reader :board
+
   def initialize
     @board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
   end
@@ -7,7 +11,11 @@ class Game
     raise 'This space is already taken' if @board[pos] != ' '
 
     @board[pos, 1] = 'X'
-    @board
+    if result?
+      return result?
+    else
+      @board
+    end
   end
 
   def player_o(pos)
@@ -15,5 +23,12 @@ class Game
 
     @board[pos, 1] = 'O'
     @board
+  end
+
+  def result?
+    unless @board.include? ' '
+      return 'This game is tied'
+    end
+
   end
 end

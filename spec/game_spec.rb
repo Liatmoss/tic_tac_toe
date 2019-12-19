@@ -1,4 +1,5 @@
 require 'game'
+require_relative 'game_helper'
 describe Game do
   let(:game) { Game.new }
 
@@ -12,7 +13,7 @@ describe Game do
     end
   end
 
-  describe 'player_o' do
+  describe '#player_o' do
     it 'shows an o in one square if player o chooses 1' do
       expect(game.player_o(1)).to eq([' ', 'O', ' ', ' ', ' ', ' ', ' ', ' ', ' '])
     end
@@ -21,4 +22,17 @@ describe Game do
       expect { game.player_o(1) }.to raise_error 'This space is already taken'
     end
   end
+
+  describe '#result' do
+    it 'knows when a game is tied' do
+      game_draw
+      expect(game.result?).to eq('This game is tied')
+    end
+
+    it 'knows when x wins a game' do
+      game_x_wins
+      expect(game.result?).to eq('x wins this game')
+    end
+  end
+
 end

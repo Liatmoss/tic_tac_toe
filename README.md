@@ -18,3 +18,9 @@ Build the business logic for a game of tic tac toe. It should be easy to impleme
 1. Install gems using 'bundle install'
 2. Use 'rspec' to run tests with SimpleCov checking the coverage - coverage should be higher than 95%
 3. If all tests pass, run 'rubocop' to check the readability of code
+
+
+### How code is structured
+- Code is structured in two classes
+- Game class controls the players turns and where they place their pieces on the board
+- Calculation class iterates through the array after each turn with the check method
