@@ -27,12 +27,4 @@ class Game
     # end
     @board
   end
-
-  def player_o_wins_vert?
-    true if @board[0] == 'O' && @board[3] == 'O' && @board[6] == 'O' || @board[1] == 'O' && @board[4] == 'O' && @board[7] == 'O' || @board[2] == 'O' && @board[5] == 'O' && @board[8] == 'O'
-  end
-
-  def player_o_wins_diagonal?
-    true if @board[0] == 'O' && @board[4] == 'O' && @board[8] == 'O' || @board[2] == 'O' && @board[4] == 'O' && @board[6] == 'O'
-  end
 end

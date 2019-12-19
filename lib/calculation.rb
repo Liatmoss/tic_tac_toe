@@ -11,7 +11,7 @@ class Calculation
   def result?
     if player_x_wins_hor? == true || player_x_wins_vert? == true || player_x_wins_diagonal? == true
       'x wins this game'
-    elsif player_o_wins_hor? == true
+    elsif player_o_wins_hor? == true || player_o_wins_vert? == true || player_o_wins_diagonal? == true
       'o wins this game'
     elsif @game.board.include?(' ') == false
       'This game is tied'
@@ -34,4 +34,11 @@ class Calculation
     true if @game.board[0] == 'O' && @game.board[1] == 'O' && @game.board[2] == 'O' || @game.board[3] == 'O' && @game.board[4] == 'O' && @game.board[5] == 'O' || @game.board[6] == 'O' && @game.board[7] == 'O' && @game.board[8] == 'O'
   end
 
+  def player_o_wins_vert?
+    true if @game.board[0] == 'O' && @game.board[3] == 'O' && @game.board[6] == 'O' || @game.board[1] == 'O' && @game.board[4] == 'O' && @game.board[7] == 'O' || @game.board[2] == 'O' && @game.board[5] == 'O' && @game.board[8] == 'O'
+  end
+
+  def player_o_wins_diagonal?
+    true if @game.board[0] == 'O' && @game.board[4] == 'O' && @game.board[8] == 'O' || @game.board[2] == 'O' && @game.board[4] == 'O' && @game.board[6] == 'O'
+  end
 end
