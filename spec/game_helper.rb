@@ -27,3 +27,21 @@ def game_x_wins_diagonal
   game.player_x(5)
   game.player_x(9)
 end
+
+def game_o_wins_hor
+  game.player_o(1)
+  game.player_o(2)
+  game.player_o(3)
+end
+
+def game_o_wins_vert
+  game.player_o(1)
+  game.player_o(4)
+  game.player_o(7)
+end
+
+def game_o_wins_diagonal
+  game.player_o(1)
+  game.player_o(5)
+  game.player_o(9)
+end
