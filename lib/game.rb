@@ -6,9 +6,9 @@ class Game
   end
 
   def player_x(pos)
-    raise 'This space is already taken' if @board[pos] != ' '
+    raise 'This space is already taken' if @board[pos-1] != ' '
 
-    @board[pos, 1] = 'X'
+    @board[pos - 1, 1] = 'X'
     if result?
       return result?
     else
@@ -17,21 +17,29 @@ class Game
   end
 
   def player_o(pos)
-    raise 'This space is already taken' if @board[pos] != ' '
+    raise 'This space is already taken' if @board[pos-1] != ' '
 
-    @board[pos, 1] = 'O'
+    @board[pos - 1, 1] = 'O'
     @board
   end
 
   def result?
-    if player_x_wins? == true
+    if player_x_wins_hor? == true || player_x_wins_vert? == true || player_x_wins_diagonal? == true
       'x wins this game'
     elsif @board.include?(' ') == false
       'This game is tied'
     end
   end
 
-  def player_x_wins?
-    true if @board[0] == 'X' && @board[1] == 'X' && @board[2] == 'X' || @board[3] == 'X' && @board[4] == 'X' && @board[5] == 'X' || @board[6] == 'X' && @board[7] == 'X' && @board[8] == 'X' || @board[0] == 'X' && @board[3] == 'X' && @board[6] == 'X' || @board[1] == 'X' && @board[4] == 'X' && @board[7] == 'X' || @board[2] == 'X' && @board[5] == 'X' && @board[8] == 'X'
+  def player_x_wins_hor?
+    true if @board[0] == 'X' && @board[1] == 'X' && @board[2] == 'X' || @board[3] == 'X' && @board[4] == 'X' && @board[5] == 'X' || @board[6] == 'X' && @board[7] == 'X' && @board[8] == 'X'
+  end
+
+  def player_x_wins_vert?
+    true if @board[0] == 'X' && @board[3] == 'X' && @board[6] == 'X' || @board[1] == 'X' && @board[4] == 'X' && @board[7] == 'X' || @board[2] == 'X' && @board[5] == 'X' && @board[8] == 'X'
+  end
+
+  def player_x_wins_diagonal?
+    true if @board[0] == 'X' && @board[4] == 'X' && @board[8] == 'X' || @board[2] == 'X' && @board[4] == 'X' && @board[6] == 'X'
   end
 end
