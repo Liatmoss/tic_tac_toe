@@ -23,8 +23,6 @@
       ],
       "/Users/liatmoss/Desktop/Projects/WeekTen/tic_tac_toe/lib/game.rb": [
         1,
-        null,
-        1,
         1,
         null,
         1,
@@ -36,9 +34,9 @@
         null,
         10,
         10,
-        1,
+        2,
         null,
-        9,
+        8,
         null,
         null,
         null,
@@ -50,17 +48,15 @@
         null,
         null,
         1,
-        13,
+        14,
+        3,
+        11,
         3,
         null,
         null,
         null,
-        null
-      ],
-      "/Users/liatmoss/Desktop/Projects/WeekTen/tic_tac_toe/lib/calculation.rb": [
         1,
-        null,
-        1,
+        14,
         null,
         null
       ],
@@ -126,6 +122,6 @@
         null
       ]
     },
-    "timestamp": 1576761195
+    "timestamp": 1576768177
   }
 }

@@ -1,5 +1,3 @@
-require_relative 'calculation'
-
 class Game
   attr_reader :board
 
@@ -26,9 +24,14 @@ class Game
   end
 
   def result?
-    unless @board.include? ' '
-      return 'This game is tied'
+    if player_x_wins? == true
+      'x wins this game'
+    elsif @board.include?(' ') == false
+      'This game is tied'
     end
+  end
 
+  def player_x_wins?
+    true if @board[0] == 'X' && @board[1] == 'X' && @board[2] == 'X' || @board[3] == 'X' && @board[4] == 'X' && @board[5] == 'X' || @board[6] == 'X' && @board[7] == 'X' && @board[8] == 'X'
   end
 end
