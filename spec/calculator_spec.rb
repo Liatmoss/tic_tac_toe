@@ -28,5 +28,12 @@ describe Calculation do
         expect(calculation.result?).to eq('x wins this game')
       end
     end
+
+    describe '#o wins' do
+      it 'knows when o wins a game horizontally' do
+        allow(game).to receive(:board).and_return ['O', 'O', 'O', ' ', ' ', ' ', ' ', ' ', ' ']
+        expect(calculation.result?).to eq('o wins this game')
+      end
+    end
   end
 end

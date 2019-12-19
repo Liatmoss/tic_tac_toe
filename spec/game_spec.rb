@@ -22,31 +22,4 @@ describe Game do
       expect { game.player_o(2) }.to raise_error 'This space is already taken'
     end
   end
-
-  # describe '#result' do
-  #   describe '#x wins' do
-  #
-  #     it 'knows when x wins a game diagonally' do
-  #       game_x_wins_diagonal
-  #       expect(game.result?).to eq('x wins this game')
-  #     end
-  #   end
-  #
-  #   describe '#o wins' do
-  #     it 'knows when o wins a game horizontally' do
-  #       game_o_wins_hor
-  #       expect(game.result?).to eq('o wins this game')
-  #     end
-  #
-  #     it 'knows when o wins a game vertically' do
-  #       game_o_wins_vert
-  #       expect(game.result?).to eq('o wins this game')
-  #     end
-  #
-  #     it 'knows when o wins a game diagonally' do
-  #       game_o_wins_diagonal
-  #       expect(game.result?).to eq('o wins this game')
-  #     end
-  #   end
-  # end
 end
