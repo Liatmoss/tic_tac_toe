@@ -17,8 +17,14 @@ describe Calculation do
         allow(game).to receive(:board).and_return ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
         expect(calculation.result?).to eq('x wins this game')
       end
+
       it 'knows when x wins a game vertically' do
         allow(game).to receive(:board).and_return ['X', ' ', ' ', 'X', ' ', ' ', 'X', ' ', ' ']
+        expect(calculation.result?).to eq('x wins this game')
+      end
+
+      it 'knows when x wins a game diagonally' do
+        allow(game).to receive(:board).and_return ['X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X']
         expect(calculation.result?).to eq('x wins this game')
       end
     end

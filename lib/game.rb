@@ -38,9 +38,6 @@ class Game
     end
   end
 
-  def player_x_wins_diagonal?
-    true if @board[0] == 'X' && @board[4] == 'X' && @board[8] == 'X' || @board[2] == 'X' && @board[4] == 'X' && @board[6] == 'X'
-  end
 
   def player_o_wins_hor?
     true if @board[0] == 'O' && @board[1] == 'O' && @board[2] == 'O' || @board[3] == 'O' && @board[4] == 'O' && @board[5] == 'O' || @board[6] == 'O' && @board[7] == 'O' && @board[8] == 'O'

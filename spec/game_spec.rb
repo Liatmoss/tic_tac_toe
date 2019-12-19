@@ -25,10 +25,6 @@ describe Game do
 
   # describe '#result' do
   #   describe '#x wins' do
-  #     it 'knows when x wins a game vertically' do
-  #       game_x_wins_vert
-  #       expect(game.result?).to eq('x wins this game')
-  #     end
   #
   #     it 'knows when x wins a game diagonally' do
   #       game_x_wins_diagonal
