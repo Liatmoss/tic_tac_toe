@@ -1,5 +1,4 @@
 require 'Calculation'
-require_relative 'game_helper'
 
 describe Calculation do
   let(:game) { double :game }
