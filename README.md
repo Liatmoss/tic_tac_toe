@@ -21,6 +21,7 @@ Build the business logic for a game of tic tac toe. It should be easy to impleme
 
 
 ### How code is structured
-- Code is structured in two classes
+- Code is structured in three classes
 - Game class controls the players turns and where they place their pieces on the board
 - Calculation class checks the array to see if the latest move resulted in a win
+- Results class send the result of a winning turn back to Game to announce the winner

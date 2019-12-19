@@ -1,21 +1,12 @@
 require_relative 'game'
 
 class Calculation
-
-  attr_reader :result
-
   def initialize(game)
     @game = game
   end
 
-  def result?
-    if player_x_wins_hor? == true || player_x_wins_vert? == true || player_x_wins_diagonal? == true
-      'x wins this game'
-    elsif player_o_wins_hor? == true || player_o_wins_vert? == true || player_o_wins_diagonal? == true
-      'o wins this game'
-    elsif @game.board.include?(' ') == false
-      'This game is tied'
-    end
+  def game_draws?
+    true if @game.board.include?(' ') == false
   end
 
   def player_x_wins_hor?

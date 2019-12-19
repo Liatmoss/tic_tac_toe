@@ -1,5 +1,4 @@
 require 'game'
-require_relative 'game_helper'
 describe Game do
   let(:game) { Game.new }
 
