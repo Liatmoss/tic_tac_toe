@@ -23,44 +23,34 @@ describe Game do
     end
   end
 
-  describe '#result' do
-    it 'knows when a game is tied' do
-      game_draw
-      expect(game.result?).to eq('This game is tied')
-    end
-
-    describe '#x wins' do
-      it 'knows when x wins a game horizontally' do
-        game_x_wins_hor
-        expect(game.result?).to eq('x wins this game')
-      end
-
-      it 'knows when x wins a game vertically' do
-        game_x_wins_vert
-        expect(game.result?).to eq('x wins this game')
-      end
-
-      it 'knows when x wins a game diagonally' do
-        game_x_wins_diagonal
-        expect(game.result?).to eq('x wins this game')
-      end
-    end
-
-    describe '#o wins' do
-      it 'knows when o wins a game horizontally' do
-        game_o_wins_hor
-        expect(game.result?).to eq('o wins this game')
-      end
-
-      it 'knows when o wins a game vertically' do
-        game_o_wins_vert
-        expect(game.result?).to eq('o wins this game')
-      end
-
-      it 'knows when o wins a game diagonally' do
-        game_o_wins_diagonal
-        expect(game.result?).to eq('o wins this game')
-      end
-    end
-  end
+  # describe '#result' do
+  #   describe '#x wins' do
+  #     it 'knows when x wins a game vertically' do
+  #       game_x_wins_vert
+  #       expect(game.result?).to eq('x wins this game')
+  #     end
+  #
+  #     it 'knows when x wins a game diagonally' do
+  #       game_x_wins_diagonal
+  #       expect(game.result?).to eq('x wins this game')
+  #     end
+  #   end
+  #
+  #   describe '#o wins' do
+  #     it 'knows when o wins a game horizontally' do
+  #       game_o_wins_hor
+  #       expect(game.result?).to eq('o wins this game')
+  #     end
+  #
+  #     it 'knows when o wins a game vertically' do
+  #       game_o_wins_vert
+  #       expect(game.result?).to eq('o wins this game')
+  #     end
+  #
+  #     it 'knows when o wins a game diagonally' do
+  #       game_o_wins_diagonal
+  #       expect(game.result?).to eq('o wins this game')
+  #     end
+  #   end
+  # end
 end

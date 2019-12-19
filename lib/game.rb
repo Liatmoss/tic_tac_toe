@@ -9,22 +9,22 @@ class Game
     raise 'This space is already taken' if @board[pos-1] != ' '
 
     @board[pos - 1, 1] = 'X'
-    if result?
-      return result?
-    else
+    # if result?
+    #   return result?
+    # else
       @board
-    end
+    # end
   end
 
   def player_o(pos)
     raise 'This space is already taken' if @board[pos-1] != ' '
 
     @board[pos - 1, 1] = 'O'
-    if result?
-      return result?
-    else
-      @board
-    end
+    # if result?
+    #   return result?
+    # else
+    #   @board
+    # end
     @board
   end
 
@@ -36,10 +36,6 @@ class Game
     elsif @board.include?(' ') == false
       'This game is tied'
     end
-  end
-
-  def player_x_wins_hor?
-    true if @board[0] == 'X' && @board[1] == 'X' && @board[2] == 'X' || @board[3] == 'X' && @board[4] == 'X' && @board[5] == 'X' || @board[6] == 'X' && @board[7] == 'X' && @board[8] == 'X'
   end
 
   def player_x_wins_vert?
