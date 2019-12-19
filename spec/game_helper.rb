@@ -10,10 +10,14 @@ def game_draw
   game.player_x(5)
 end
 
-def game_x_wins
+def game_x_wins_hor
   game.player_x(0)
-  game.player_o(3)
   game.player_x(1)
-  game.player_o(7)
   game.player_x(2)
+end
+
+def game_x_wins_vert
+  game.player_x(0)
+  game.player_x(3)
+  game.player_x(6)
 end

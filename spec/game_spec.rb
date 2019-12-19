@@ -29,8 +29,13 @@ describe Game do
       expect(game.result?).to eq('This game is tied')
     end
 
-    it 'knows when x wins a game' do
-      game_x_wins
+    it 'knows when x wins a game horizontally' do
+      game_x_wins_hor
+      expect(game.result?).to eq('x wins this game')
+    end
+
+    it 'knows when x wins a game vertically' do
+      game_x_wins_vert
       expect(game.result?).to eq('x wins this game')
     end
   end
