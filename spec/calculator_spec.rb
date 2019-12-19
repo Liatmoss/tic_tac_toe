@@ -1,15 +1,15 @@
-# require 'Calculation'
-# require_relative 'game_helper'
-#
-# describe Calculation do
-#   let(:calculation) { Calculation.new }
-#   let(:game) { double :game }
-#
-#   describe '#game_calculations' do
-#     it 'knows if the game results in a draw' do
-#       game_draw
-#       expect(calculation.result?).to eq('This game is tied')
-#     end
-#   end
-#
-# end
+require 'Calculation'
+require_relative 'game_helper'
+
+describe Calculation do
+  let(:game) { double :game }
+  let(:calculation) { Calculation.new(game) }
+
+
+  describe '#game_calculations' do
+    it 'knows if the game results in a draw' do
+      allow(game).to receive(:board).and_return ['X', 'O', 'X', 'O', 'X', 'X', 'O', 'X', 'O']
+      expect(calculation.result?).to eq('This game is tied')
+    end
+  end
+end

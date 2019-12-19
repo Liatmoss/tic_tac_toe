@@ -6,6 +6,8 @@ class Calculation
     @game = game
   end
 
-  def 
+  def result?
+    'This game is tied' if @game.board.include?(' ') == false
+  end
 
 end
